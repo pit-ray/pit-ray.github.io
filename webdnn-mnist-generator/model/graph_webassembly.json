@@ -1,0 +1,150 @@
+{
+  "converted_at": 1567745177,
+  "weight_encoding": "raw",
+  "memory_layout": {
+    "static": {
+      "size": 243167,
+      "allocations": {
+        "a11": {
+          "name": "a11",
+          "offset": 243057,
+          "size": 110
+        },
+        "a13": {
+          "name": "a13",
+          "offset": 237249,
+          "size": 1152
+        },
+        "a25": {
+          "name": "a25",
+          "offset": 238401,
+          "size": 1152
+        },
+        "a16": {
+          "name": "a16",
+          "offset": 239553,
+          "size": 1152
+        },
+        "a17": {
+          "name": "a17",
+          "offset": 228929,
+          "size": 5184
+        },
+        "a26": {
+          "name": "a26",
+          "offset": 234113,
+          "size": 3136
+        },
+        "a20": {
+          "name": "a20",
+          "offset": 222657,
+          "size": 6272
+        },
+        "a21": {
+          "name": "a21",
+          "offset": 216385,
+          "size": 6272
+        },
+        "a22": {
+          "name": "a22",
+          "offset": 210113,
+          "size": 6272
+        },
+        "a23": {
+          "name": "a23",
+          "offset": 241489,
+          "size": 784
+        },
+        "a24": {
+          "name": "a24",
+          "offset": 240705,
+          "size": 784
+        },
+        "a12": {
+          "name": "a12",
+          "offset": 242273,
+          "size": 784
+        },
+        "a1": {
+          "name": "a1",
+          "offset": 0,
+          "size": 126720
+        },
+        "a2": {
+          "name": "a2",
+          "offset": 126720,
+          "size": 1152
+        },
+        "a3": {
+          "name": "a3",
+          "offset": 127872,
+          "size": 73728
+        },
+        "a4": {
+          "name": "a4",
+          "offset": 201600,
+          "size": 64
+        },
+        "a5": {
+          "name": "a5",
+          "offset": 201664,
+          "size": 64
+        },
+        "a6": {
+          "name": "a6",
+          "offset": 201728,
+          "size": 8192
+        },
+        "a7": {
+          "name": "a7",
+          "offset": 209920,
+          "size": 32
+        },
+        "a8": {
+          "name": "a8",
+          "offset": 209952,
+          "size": 32
+        },
+        "a9": {
+          "name": "a9",
+          "offset": 209984,
+          "size": 128
+        },
+        "a10": {
+          "name": "a10",
+          "offset": 210112,
+          "size": 1
+        }
+      }
+    },
+    "dynamic": {
+      "size": 0,
+      "allocations": {}
+    }
+  },
+  "placeholders": {},
+  "unresolved_value_lists": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ],
+  "inputs": [
+    "a11"
+  ],
+  "outputs": [
+    "a12"
+  ],
+  "licenses": {
+    "webdnn": "(C) Machine Intelligence Laboratory (The University of Tokyo), MIT License",
+    "eigen": "(C) Eigen authors, MPL 2.0 License"
+  }
+}
