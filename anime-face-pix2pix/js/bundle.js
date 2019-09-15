@@ -173,18 +173,29 @@ eval("\n\nvar stylesInDom = {};\n\nvar isOldIE = function isOldIE() {\n  var mem
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(DrawingBoard) {/* harmony import */ var DrawingBoard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! DrawingBoard */ \"../../AppData/Roaming/npm/node_modules/drawingboard.js/dist/drawingboard.js\");\n/* harmony import */ var DrawingBoard__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(DrawingBoard__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var drawingboard_js_dist_drawingboard_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! drawingboard.js/dist/drawingboard.min.css */ \"../../AppData/Roaming/npm/node_modules/drawingboard.js/dist/drawingboard.min.css\");\n/* harmony import */ var drawingboard_js_dist_drawingboard_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(drawingboard_js_dist_drawingboard_min_css__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\nfunction setup_drawing_board(){\r\n    var board = new DrawingBoard.Board(\"drawing_board\", {\r\n        enlargeYourContainer: true,\r\n        controls: [\r\n            'Color',\r\n            'DrawingMode',\r\n            'Size',\r\n            'Navigation',\r\n            'Download'\r\n        ],\r\n        controlsPosition: \"top\"\r\n    }) ;\r\n    console.log(board) ;\r\n}\r\n\r\nDrawingBoard.Board.prototype.downloadImg = function(){\r\n    var canvas = document.getElementsByClassName( \"drawing-board-canvas\" ) ;\r\n    console.log( canvas ) ;\r\n    var a = document.createElement(\"a\") ;\r\n    a.href = canvas[0].toDataURL(\"image/jpeg\", 1.00) ;\r\n    a.download = \"before.jpg\" ;\r\n    a.click() ;\r\n}\r\n\r\nwindow.onload = function() {\r\n    setup_drawing_board() ;\r\n}\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! drawingboard.js/dist/drawingboard.min */ \"../../AppData/Roaming/npm/node_modules/drawingboard.js/dist/drawingboard.min.js\")))\n\n//# sourceURL=webpack:///./src/js/drawing_board.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(DrawingBoard) {/* harmony import */ var DrawingBoard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! DrawingBoard */ \"../../AppData/Roaming/npm/node_modules/drawingboard.js/dist/drawingboard.js\");\n/* harmony import */ var DrawingBoard__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(DrawingBoard__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var drawingboard_js_dist_drawingboard_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! drawingboard.js/dist/drawingboard.min.css */ \"../../AppData/Roaming/npm/node_modules/drawingboard.js/dist/drawingboard.min.css\");\n/* harmony import */ var drawingboard_js_dist_drawingboard_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(drawingboard_js_dist_drawingboard_min_css__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\nfunction setup_drawing_board(){\r\n    var board = new DrawingBoard.Board(\"drawing_board\", {\r\n        enlargeYourContainer: true,\r\n        controls: [\r\n            'Color',\r\n            'DrawingMode',\r\n            'Size',\r\n            'Navigation',\r\n            'Download'\r\n        ],\r\n        controlsPosition: \"top\"\r\n    }) ;\r\n    console.log(board) ;\r\n}\r\n\r\nDrawingBoard.Board.prototype.downloadImg = function(){\r\n    var canvas = document.getElementsByClassName(\"drawing-board-canvas\") ;\r\n    console.log( canvas ) ;\r\n    var a = document.createElement(\"a\") ;\r\n    a.href = canvas[0].toDataURL(\"image/png\", 1.00) ;\r\n    a.download = \"before.png\" ;\r\n    a.click() ;\r\n}\r\n\r\nwindow.addEventListener(\"DOMContentLoaded\", function(){\r\n    setup_drawing_board() ;\r\n}) ;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! drawingboard.js/dist/drawingboard.min */ \"../../AppData/Roaming/npm/node_modules/drawingboard.js/dist/drawingboard.min.js\")))\n\n//# sourceURL=webpack:///./src/js/drawing_board.js?");
+
+/***/ }),
+
+/***/ "./src/js/pix2pix.js":
+/*!***************************!*\
+  !*** ./src/js/pix2pix.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("//const cv = require(\"opencv4nodejs\") ;\r\n\r\nfunction get_drawing_array(){\r\n    var db_canvas = document.getElementsByClassName(\"drawing-board-canvas\")[0] ;\r\n\r\n    //仮のcanvasを用意し、そこへ一時的に書き込む\r\n    var buf_canvas = document.createElement(\"canvas\") ;\r\n    var bctx = buf_canvas.getContext(\"2d\") ;\r\n    buf_canvas.width = 256 ;\r\n    buf_canvas.height = 256 ;\r\n    bctx.drawImage(db_canvas, 0, 0, db_canvas.width, db_canvas.height, 0, 0, 256, 256) ;\r\n    var buf_img= bctx.getImageData(0, 0, 256, 256) ;\r\n\r\n    return buf_img ;\r\n}\r\n\r\nfunction g_blur(img){\r\n    var src = cv.imread(img) ;\r\n    var dst = new cv.Mat() ;\r\n    var ksize = new cv.Size(3, 3) ;\r\n\r\n    cv.GaussianBlur(src, dst, ksize, 0, 0, cv.BORDER_DEFAULT) ;\r\n    console.log(dst) ;\r\n    return dst.data ;\r\n}\r\n\r\nfunction show_result(img){\r\n    var output_canvas = document.getElementById(\"output\").getContext(\"2d\") ;\r\n    output_canvas.putImageData(img, 0, 0) ;\r\n}\r\n\r\nfunction main(){\r\n    var src = get_drawing_array() ;\r\n    console.log(src) ;\r\n    show_result(src) ;\r\n    //var g_blur_img = g_blur(src) ;\r\n\r\n    //show_result(g_blur_img) ;\r\n}\r\n\r\nwindow.addEventListener(\"DOMContentLoaded\", function(){\r\n    document.getElementById(\"generate\").onclick = function() {\r\n        main() ;\r\n    }\r\n}) ;\n\n//# sourceURL=webpack:///./src/js/pix2pix.js?");
 
 /***/ }),
 
 /***/ 0:
-/*!***************************************!*\
-  !*** multi ./src/js/drawing_board.js ***!
-  \***************************************/
+/*!***********************************************************!*\
+  !*** multi ./src/js/drawing_board.js ./src/js/pix2pix.js ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! ./src/js/drawing_board.js */\"./src/js/drawing_board.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/drawing_board.js?");
+eval("__webpack_require__(/*! ./src/js/drawing_board.js */\"./src/js/drawing_board.js\");\nmodule.exports = __webpack_require__(/*! ./src/js/pix2pix.js */\"./src/js/pix2pix.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/drawing_board.js_./src/js/pix2pix.js?");
 
 /***/ })
 
