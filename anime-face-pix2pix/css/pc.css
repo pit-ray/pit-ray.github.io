@@ -1,8 +1,14 @@
-#drawing_board_wrapper:before {
+#drawing_board_wrapper {
     display: block ;
-    padding-top: 50% ;
+    width: 512px ;
+    height: 512px ;
+    margin: auto ;
 }
 #drawing_board {
+    /*
+    width: 256px ;
+    height: 256px ;
+    */
     width: 512px ;
     height: 512px ;
     margin: auto ;

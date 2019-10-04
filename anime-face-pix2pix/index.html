@@ -10,9 +10,16 @@
     </head>
     <body>
         <br>
+        <input type="radio" name="color" value="any" id="any_color" checked>Hair<input id="color_selector" type="color"></input></input><br>
+        <input type="radio" name="color" value="#00FF00" id="eye_color">Eye</input><br>
+        <input type="radio" name="color" value="#0000FF" id="nose_color">Nose</input><br>
+        <input type="radio" name="color" value="#FF0000" id="mouse_color">Mouse</input><br>
+
         <div id="drawing_board_wrapper">
             <div id="drawing_board"></div>
         </div>
+        <br>
+        <br>
         <div class="button">
             <div class="button_wrapper">
                 <div id="generate" class="button_core">Generate</div>
@@ -23,6 +30,7 @@
         <br>
         <hr/>
         <p style="font-size: 30px ; margin: auto ; position: relative ;">Result</p>
+        <canvas id="blur" height="256" width="256" style="border: solid ;"></canvas>
         <canvas id="output" height="256" width="256" style="border: solid ; margin: auto ; position: relative ;"></canvas>
 
     </body>
