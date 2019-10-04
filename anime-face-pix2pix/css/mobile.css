@@ -91,10 +91,6 @@ ul.objects li.app {
     background: #36B4C7 ;
     transition: all .35s ease-in-out .5s ;
     background-color: white ;
-    -webkit-user-select: none ;
-    -moz-user-select: none ;
-    -ms-user-select: none ;
-    user-select: none ;
 }
 
 .button_wrapper:after {
@@ -150,10 +146,6 @@ ul.objects li.app {
     width: 512px ;
     height: 512px ;
     background-color: white ;
-    -webkit-user-select: none ;
-    -moz-user-select: none ;
-    -ms-user-select: none ;
-    user-select: none ;
 }
 
 #seed_wrapper:before {
