@@ -97,36 +97,14 @@ eval("const RED = \"#ff0000\" ;\r\nconst GREEN = \"#00ff00\" ;\r\nconst BLUE = \
 
 /***/ }),
 
-/***/ "./src/js/pix2pix.js":
-/*!***************************!*\
-  !*** ./src/js/pix2pix.js ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("\n\n//# sourceURL=webpack:///./src/js/pix2pix.js?");
-
-/***/ }),
-
-/***/ "./src/js/tool_tabs.js":
-/*!*****************************!*\
-  !*** ./src/js/tool_tabs.js ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("\n\n//# sourceURL=webpack:///./src/js/tool_tabs.js?");
-
-/***/ }),
-
 /***/ 0:
-/*!**************************************************************************!*\
-  !*** multi ./src/js/canvas.js ./src/js/pix2pix.js ./src/js/tool_tabs.js ***!
-  \**************************************************************************/
+/*!********************************!*\
+  !*** multi ./src/js/canvas.js ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./src/js/canvas.js */\"./src/js/canvas.js\");\n__webpack_require__(/*! ./src/js/pix2pix.js */\"./src/js/pix2pix.js\");\nmodule.exports = __webpack_require__(/*! ./src/js/tool_tabs.js */\"./src/js/tool_tabs.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/canvas.js_./src/js/pix2pix.js_./src/js/tool_tabs.js?");
+eval("module.exports = __webpack_require__(/*! ./src/js/canvas.js */\"./src/js/canvas.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/canvas.js?");
 
 /***/ })
 
