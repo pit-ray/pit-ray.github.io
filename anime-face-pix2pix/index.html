@@ -2,36 +2,58 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" href="width=device-width">
         <link rel="stylesheet" href="./css/mobile.css" type="text/css">
         <link rel="stylesheet" href="./css/pc.css" type="text/css" media="screen and (min-width:740px)">
+
         <title>pix2pix</title>
+
         <script src="./js/bundle.js"></script>
     </head>
-    <body>
-        <br>
-        <input type="radio" name="color" value="any" id="any_color" checked>Hair<input id="color_selector" type="color"></input></input><br>
-        <input type="radio" name="color" value="#00FF00" id="eye_color">Eye</input><br>
-        <input type="radio" name="color" value="#0000FF" id="nose_color">Nose</input><br>
-        <input type="radio" name="color" value="#FF0000" id="mouse_color">Mouse</input><br>
 
-        <div id="drawing_board_wrapper">
-            <div id="drawing_board"></div>
-        </div>
-        <br>
-        <br>
-        <div class="button">
-            <div class="button_wrapper">
-                <div id="generate" class="button_core">Generate</div>
+    <body>
+        <div id="box">
+            <div id="seed_wrapper">
+                    <canvas id="seed" height="512px", width="512px"></canvas> 
+            </div>
+            <div class="button">
+                <div class="button_wrapper">
+                    <div class="button_core">Draw</div>
+                </div>
             </div>
         </div>
+            <!--
+            <ul class="objects">
+                <li class="tools">
+                    <div>
+                        <input type="image" src="resrc/hair.jpg" class="tool">
+                    </div>
 
-        <br>
-        <br>
-        <hr/>
-        <p style="font-size: 30px ; margin: auto ; position: relative ;">Result</p>
-        <canvas id="blur" height="256" width="256" style="border: solid ;"></canvas>
-        <canvas id="output" height="256" width="256" style="border: solid ; margin: auto ; position: relative ;"></canvas>
+                    <div>
+                        <input type="image" src="resrc/eye.jpg" class="tool">
+                    </div>
 
+                    <div>
+                        <input type="image" src="resrc/nose.jpg" class="tool">
+                    </div>
+
+                    <div>
+                        <input type="image" src="resrc/mouse.jpg" class="tool">
+                    </div>
+
+                </li>
+                <li class="board">
+                    <div id="seed_wrapper">
+                        <canvas id="seed" height="256px", width="256px"></canvas> 
+                    </div>
+                </li>
+                <li class="app">
+                    <input type="image" src="resrc/draw.jpg" class="tool">
+
+
+                </li>
+            </ul>
+            -->
     </body>
 </html>
