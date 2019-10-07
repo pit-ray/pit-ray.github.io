@@ -2,6 +2,12 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <script type="text/javascript">
+            var ua = navigator.userAgent ;
+            if( ua.indexOf( "iPhone" ) > 0 || ua.indexOf( "Android" ) > 0 && ua.indexOf( "Mobile" ) > 0 ) {
+                    location.href = "./sp/" ;
+                }
+        </script>
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" href="width=device-width">
         <link rel="stylesheet" href="./css/mobile.css" type="text/css">
