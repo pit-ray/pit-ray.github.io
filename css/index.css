@@ -1,7 +1,11 @@
+html {
+    font-size: 62.5% ;
+}
 
 body {
     background-color: #272727 ;
     color: #d4d4d4 ;
+    font-size: 1.6rem ;
 }
 
 a {
