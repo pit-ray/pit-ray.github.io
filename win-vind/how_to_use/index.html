@@ -5,102 +5,168 @@
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/how_to_use.css">
     <link rel="shortcut icon" type="image/png" href="../imgs/win-vind-icon.png">
+    <script type="text/javascript" src="../js/bundle.js"></script>
     <script type="text/javascript" src="js/bundle.js"></script>
 
-    <title>win-vind</title>
+    <title>How to use win-vind</title>
 </head>
 <body>
-    <div id="top-title" class="center">win-vind</div>
-    <div class="center"> <img src="imgs/win-vind-icon.png" width="256" unselectable="no"/></div>
-    <div id="description" class="center">Simpl Vim Key Binder for Windows</div>
-
+    <div id="top-title" class="center">How to use</div>
+    <br>
+    <br>
     <div class="side_wrapper">
         <aside id="sidebar">
             <div class="sidebar_inner">
-                <div class="sidebar-item"><a href="..">Home</a></div>
-                <div class="sidebar-item"><a href=".">How to Use</a></div>
-                <div class="sidebar-item"><a href="../how_to_contribute/">How to Contribute</a></div>
-                <div class="sidebar-item"><a href="../cheat_sheet/">Cheat Sheet</a></div>
-                <div class="sidebar-item"><a href="../q_and_a/">Q&amp;A</a></div>
+                <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/">Home</a></div>
+                <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/downloads/">Downloads</div>
+                <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/how_to_use/">How to Use</a></div>
+                <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/how_to_contribute/">How to Contribute</a></div>
+                <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/cheat_sheet/">Cheat Sheet</a></div>
+                <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/q_and_a/">Q&amp;A</a></div>
+                <br>
+                <hr>
+                <div class="sidebar-item"><a href="#installation">Installation</a></div>
+                <div class="sidebar-item"><a href="#overview">Overview</a></div>
+                <div class="sidebar-item"><a href="#note">Note</a></div>
+                <div class="sidebar-item"><a href="#bindings">Bindings</a></div>
+                <div class="sidebar-item"><a href="#details_of_funcs">Details of Functions</a></div>
+                <div class="sidebar-item"><a href="#options">Options</a></div>
             </div>
         </aside>
         <main class="main">
+            <span class="sect1" id="installation">Installation</span><hr>
+            <ol>
+                <li>Please download latest version win-vind from <a href="https://pit-ray.github.io/win-vind/downloads">Downloads</a>. </li>
+                <li>Execute the installer or unzip.</li>
+                <li>Start win-vind.</li>
+                <li>In default, the mode is <b>GUI Nomral</b>. You can setup <span class="key">:set</span> or <span class="key">:config</span> or right-click on the system tray.</li>
+                <li>In the end, you can terminate win-vind by <span class="key">:exit</span> or right-click on the system tray.</li>
+            </ol>
+
             <br>
             <br>
-            <span class="sect1">Description</span><hr>
-            <p>You can operate Windows by key-bindings like Vim.</p>
-            <br>
-            <br>
-            <span class="sect1">Downloads</span><hr>
+            <span class="sect1" id="overview">Overview</span><hr>
+            <img src="../imgs/mode_overview_2.jpg" width="740">
+            <p>win-vind has plenty of hotkeys and commands, but they are based on the original Vim. Some little differences are that its mode has two layers and its unique functions for GUI. Concretely, they are <b>GUI Mode</b> and <b>Editor Mode</b>. </p>
+
+            <img src="../imgs/GUIandEditor.jpg" width="600">
             <ul>
-                <li><a href="https://github.com/pit-ray/win-vind/releases/download/v2.1.0/setup_win-vind_2.1.0.exe">setup_win-vind_2.1.0.exe</a></li>
-                <li><a href="https://github.com/pit-ray/win-vind/releases/download/v2.1.0/win-vind_2.1.0.zip">win-vind_2.1.0.zip</a></li>
+                <li>GUI Mode</li>
+                <p>The target is the mouse cursor. For instance, if you input h, moves it to left. However, it does not have a concept called rows and columns, so I implemented a wealth of alternative functions.</p>
+
+
+            <li>Editor Mode</li>
+            <p>It enables to emulate Vim when using general text editors, for instance, notepad or Microsoft Office Word or some Web forms. The target is each caret of text controls. In other words, you can operate a text editor that mainly control by a mouse with key binds of the original Vim.</p>
+            </ul>
+            <br>
+            <br>
+            <span class="sect1" id="note">Note</span><hr>
+            <ul>
+                <li><span class="key">F8 + F9</span> is safe forced termination.</li>
+                <li>win-vind <b>cannot</b> operate some windows given high-rank authorization than itself. For example, if you start Task Manager having the highest authorization and select its window, you cannot move, click or scroll the mouse cursor by win-vind. If you want to operate all windows, I recommend giving win-vind the administrator authorization. (Please use <b>Task Scheduler</b>.)</li>
             </ul>
             <br>
             <br>
 
-            <span class="sect1">GitHub</span><hr>
-            <div style="margin-left: 30px;"><a href="https://github.com/pit-ray/win-vind"><img src="https://gh-card.dev/repos/pit-ray/win-vind.svg"></a></div>
-            <br>
-            <br>
-
-            <span class="sect1">License</span><hr>
+            <span class="sect1" id="bindings">Bindings</span><hr>
+            <p>You can customize all key bindings by GUI based settings or rewriting JSON settings file easily.</p>
             <ul>
-                <li>This software is provided by <b>MIT License</b>.</li>
+                <li>GUI based</li>
+                <br>
+                <img src="https://github.com/pit-ray/pit-ray.github.io/blob/master/win-vind/imgs/bind_lits.jpg?raw=true" width=600>
+                <p>There are settings in <b>Preferences</b> in the system tray.<p>
 
-                <li>Refer to Permissiona and Limitations</li>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Commercial use</th>
-                        <td class="yes">✓</td>
-                    </tr>
-                    <tr>
-                        <th>Modification</th>
-                        <td class="yes">✓</td>
-                    </tr>
-                    <tr>
-                        <th>Distribution</th>
-                        <td class="yes">✓</td>
-                    </tr>
-                    <tr>
-                        <th>Private use</th>
-                        <td class="yes">✓</td>
-                    </tr>
-                    <tr>
-                        <th>Liability</th>
-                        <td class="no">✗</td>
-                    </tr>
-                    <tr>
-                        <th>Warranty</th>
-                        <td class="no">✗</td>
-                    </tr>
-                </tbody>
-            </table>
+
+                <li>Rewriting JSON</li>
+                If you use the installer, the file is located in <b>~/.win-vind/bindings.json</b>.<br>
+                If you get zip-version, it is existed in <b>win-vind/config/bindings.json</b>.
             </ul>
             <br>
             <br>
-            <span class="sect1">Contact</span><hr>
+
+            <span class="sect2">Syntax</span>
             <ul>
-                <li> pit-ray(Author)
-                    <p><b>Twitter</b>: <a href="https://twitter.com/pitxray">@pitxray</a></p>
-                    <p><b>E-mail</b>: pit-ray(at)outlook.com</p>
-                    <p><b>Blog</b>: <a href="https://www.pit-ray.com">pit-ray.com</a></p>
-                </li>
+                <li><span class="key">[key1](+)[key2]</span> means typing key1 and key2 with same timing.</li>
+                <li><span class="key">[key1]-&gt;[key2]</span> means typing key2 after key1. </li>
+                <li>It distinguished between upper and lowercase letters. For example, <span class="key">a</span> means <span class="key">a</span>, <span class="key">A</span> does <span class="key">Shift+a</span>.</li>
+                <li>If you want to use system keys like Shift or Ctrl, please write KMP key code.</li>
+                <br>
+                <details><summary><span class="sect3">KMP Key Code List</span> <span class="important"> (Click Here)</span></summary>  
+                    <table class="long">
+                        <tbody>
+                            <tr><th>KMP Key Code</th><th>Means</th></tr>
+                            <tr><th><span class="key">IME</span></th><td>unique key at multiple language keyboards in order to switch language.</td></tr>
+                            <tr><th><span class="key">Tab</span></th><td>-</td></tr>
+                            <tr><th><span class="key">Enter</span></th><td>Return Key</td></tr>
+                            <tr><th><span class="key">CapsLock</span></th><td>-</td></tr>
+                            <tr><th><span class="key">Left</span></th><td>←</td></tr>
+                            <tr><th><span class="key">Right</span></th><td>→</td></tr>
+                            <tr><th><span class="key">Up</span></th><td>↑</td></tr>
+                            <tr><th><span class="key">Down</span></th><td>↓</td></tr>
+                            <tr><th><span class="key">BkSpace</span></th><td>Back Space</td></tr>
+                            <tr><th><span class="key">LShift</span></th><td>Left Shift</td></tr>
+                            <tr><th><span class="key">RShift</span></th><td>Right Shift</td></tr>
+                            <tr><th><span class="key">Shift</span></th><td>Left Shift or Right Shift</td></tr>
+                            <tr><th><span class="key">LCtrl</span></th><td>Left Control</td></tr>
+                            <tr><th><span class="key">RCtrl</span></th><td>Right Control</td></tr>
+                            <tr><th><span class="key">Ctrl</span></th><td>Left Control or Right Control</td></tr>
+                            <tr><th><span class="key">LWin</span></th><td>Left Windows Key</td></tr>
+                            <tr><th><span class="key">RWin</span></th><td>Right Windows Key</td></tr>
+                            <tr><th><span class="key">Win</span></th><td>Left Windows Key or Right Windows Key</td></tr>
+                            <tr><th><span class="key">LAlt</span></th><td>Left Alt</td></tr>
+                            <tr><th><span class="key">RAlt</span></th><td>Right Alt</td></tr>
+                            <tr><th><span class="key">Alt</span></th><td>Left Alt or Right Alt</td></tr>
+                            <tr><th><span class="key">NoConvert</span></th><td>unique key at multiple language keyboard in order to cancel convert language.</td></tr>
+                            <tr><th><span class="key">Convert</span></th><td>unique key at multiple language keyboard in order to convert language.</td></tr>
+                            <tr><th><span class="key">Kana</span></th><td>unique key at Japanese keyboard in order to switch between Hiragana and Katakana.</td></tr>
+                            <tr><th><span class="key">Esc</span></th><td>Escape Key</td></tr>
+                            <tr><th><span class="key">F1</span></th><td>Function 1 (supported from 1 to 24)</td></tr>
+                            <tr><th><span class="key">SnapShot</span></th><td>Print Screen, Prt Scr, Sys Rq</td></tr>
+                            <tr><th><span class="key">Scroll</span></th><td>-</td></tr>
+                            <tr><th><span class="key">Pause</span></th><td>Pause, Break</td></tr>
+                            <tr><th><span class="key">Insert</span></th><td>-</td></tr>
+                            <tr><th><span class="key">Home</span></th><td>-</td></tr>
+                            <tr><th><span class="key">End</span></th><td>-</td></tr>
+                            <tr><th><span class="key">PageUp</span></th><td>-</td></tr>
+                            <tr><th><span class="key">PageDown</span></th><td>-</td></tr>
+                            <tr><th><span class="key">Delete</span></th><td>-</td></tr>
+                        </tbody>
+                    </table>
             </ul>
+            <br>
+            <span class="sect1" id="details_of_funcs">Details of Functions</span><hr>
+            <ul>
+                <li id="jump_to_any"></li>
+                <li id="jump_to_active_window"></li>
+                <li id="start_shell"></li>
+                <li id="start_any_app"></li>
+                <li id="make_dir"></li>
+                <li id="enable_targeting_of_dedicate_to_window"></li>
+                <li id="disable_targeting_of_dedicate_to_window"></li>
+            </ul>
+
+            <span class="sect1" id="options">Options</span><hr>
+            <div class="sect2" id="autotrack_popup">Autotrack Popup</div>
+            <p>For example, if shown <b>Are you sure you want to move this file to the Recycle Bin?</b>, it automatically moves the cursor to popup.</p>
+            <br>  
+            <div class="sect2" id="dedicate_to_window">Dedicate To One Window</div>
+            <p>If you focus on a selected window, win-vind is only validated on its window. Concretely, if you select a target window, it changes mode to <b>Editor Normal Mode</b>. Also, selected other windows, it changes to <b>GUI Insert Mode</b>.  You can switch targeting by <a href="https://pit-ray.github.io/win-vind/#enable_targeting_of_dedicate_to_window">Enable Targeting</a> and <a href="https://pit-ray.github.io/win-vind/#disable_targeting_of_dedicate_to_window">Disable Targeting</a>.</p>
+            <br>
+            <div class="sect2" id="virtual_cmd_line">Virtual Command Line</div>
+            <p>It makes inputed commands to display and the current mode on the screen.</p>
         </main>
-    </div>
-
     <div class="mobile">
         <br>
         <hr>
-        <div class="sidebar-item"><a href=".">Home</a></div>
-        <div class="sidebar-item"><a href="how_to_use">How to Use</a></div>
-        <div class="sidebar-item"><a href="how_to_contribute">How to Contribute</a></div>
-        <div class="sidebar-item"><a href="cheat_sheet">Cheat Sheet</a></div>
-        <div class="sidebar-item"><a href="q_and_a">Q&amp;A</a></div>
+        <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/">Home</a></div>
+        <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/downloads/">Downloads</div>
+        <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/how_to_use/">How to Use</a></div>
+        <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/how_to_contribute/">How to Contribute</a></div>
+        <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/cheat_sheet/">Cheat Sheet</a></div>
+        <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/q_and_a/">Q&amp;A</a></div>
     </div>
 </body>
 </html>

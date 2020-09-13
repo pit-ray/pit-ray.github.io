@@ -45,12 +45,11 @@ body {
     }
 }
 .sidebar-item {
-    font-size: 25px ;
+    font-size: 20px ;
     margin: 10px ;
 }
 .main {
-    font-size: 23px ;
-    width: 70% ;
+    width: 80% ;
     position: relative ;
 }
 .sect1 {
@@ -59,6 +58,10 @@ body {
 }
 .sect2 {
     font-size: 25px ;
+    font-weight: 450 ;
+}
+.sect3 {
+    font-size: 22px ;
     font-weight: 400 ;
 }
 b {
@@ -66,7 +69,7 @@ b {
 }
 
 .yes {
-    color: #0070c0 ;
+    color: #00c070 ;
     text-align: center ;
 }
 .no {
@@ -75,16 +78,31 @@ b {
 }
 
 table {
-    width: 50% ;
+    width: 40% ;
     border: 1px solid #333 ;
     border-collapse: collapse ;
     margin: 10px ;
+
 }
 th {
     border: 1px solid #333 ;
-    background-color: #f9f9f9 ;
+    background-color: #f6f6f6 ;
+    font-weight: 500 ;
 }
 th, td {
     border: 1px solid #333 ;
     padding: 10px ;
 }
+li {
+    padding: 5px ;
+}
+.important {
+    color: red ;
+}
+.key {
+    color: #3366ff ;
+    background-color: #f7f7f7 ;
+    font-weight: 300px ;
+    padding: 6px ;
+}
+
