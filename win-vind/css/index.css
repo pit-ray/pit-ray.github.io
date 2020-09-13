@@ -40,7 +40,7 @@ li {
     color: #3366ff ;
     background-color: #f0f0f0 ;
     font-weight: 300px ;
-    padding: 2px ;
+    padding: 0px ;
     position: relative ;
 }
 table.long {
@@ -103,6 +103,9 @@ table {
     }
     table.long {
         width: 70% ;
+    }
+    .key {
+        padding: 2px ;
     }
 }
 .sidebar-item {
