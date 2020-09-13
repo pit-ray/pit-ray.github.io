@@ -40,7 +40,8 @@ li {
     color: #3366ff ;
     background-color: #f0f0f0 ;
     font-weight: 300px ;
-    padding: 6px ;
+    padding: 2px ;
+    position: relative ;
 }
 table.long {
     width: 100% ;

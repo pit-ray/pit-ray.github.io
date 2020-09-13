@@ -32,17 +32,17 @@
             <span class="sect1">Contibute Procedure</span><hr>
             <ol>
                 <li>Clone the repository from <a href="https://github.com/pit-ray/win-vind">pit-ray/win-vind</a>. For example, you do a follow command.</li>
-                <p><span class="key">git clone https://github.com/pit-ray/win-vind.git</span></p>
+                <div class="key"><p>$git clone https://github.com/pit-ray/win-vind.git</p></div>
 
                 <li>Make a unique branch for pull requests.</li>
-                <p><span class="key">git checkout -b UNIQUE_BRANCH_NAME</span></p>
+                <div class="key"><p>$git checkout -b UNIQUE_BRANCH_NAME</p></div>
                 <li>You can do something for this project.</li>
                 <li>Build project for release in root directory.</li>
-                <p><span class="key">./push_preproc.bat</span></p>
+                <div class="key"><p>$./push_preproc.bat</p></div>
                 <li>Please add, commit and push.</li>
-                <p><span class="key">git add .</span></p>
-                <p><span class="key">git commit -m "Please write a summary of your changes."</span></p>
-                <p><span class="key">git push origin UNIQUE_BRANCH_NAME</span></p>
+                <div class="key"><p>$git add .</p></div>
+                <div class="key"><p>$git commit -m "Please write a summary of your changes."</p></div>
+                <div class="key"><p>$git push origin UNIQUE_BRANCH_NAME</p></div>
                 <li>Please send pull requests at <a href="https://github.com/pit-ray/win-vind/pulls">Pull requests pit-ray/win-vind</a></li>
             </ol>
 
@@ -92,14 +92,14 @@
             <span class="sect1">Build Instruction</span><hr>
             <ul>
                 <li>Automatically <span class="important">(Recommended)</span></li>
-                <p><span class="key">./build.bat [-debug/-release]</span></p>
+                <div class="key"><p>$./build.bat [-debug/-release]</p></div>
                 <li>Manually</li>
                 <div class="key">
-                    mkdir debug<br>
-                    cd debug<br>
-                    cmake -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -DCMAKE_SH="CMAKE_SH-NOTFOUND" ..<br>
-                    mingw32-make -f Makefile<br>
-                    cd ..<br>
+                    <p>$mkdir debug</p>
+                    <p>$cd debug</p>
+                    <p>$cmake -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -DCMAKE_SH="CMAKE_SH-NOTFOUND" ..</p>
+                    <p>$mingw32-make -f Makefile</p>
+                    <p>$cd ..</p>
                 </div>
             </ul>
 
