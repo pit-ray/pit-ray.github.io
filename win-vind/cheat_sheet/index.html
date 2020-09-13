@@ -5,102 +5,118 @@
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="shortcut icon" type="image/png" href="../imgs/win-vind-icon.png">
+    <script type="text/javascript" src="../js/bundle.js"></script>
     <script type="text/javascript" src="js/bundle.js"></script>
 
-    <title>win-vind</title>
+    <title>win-vind Cheat Sheet</title>
 </head>
 <body>
-    <div id="top-title" class="center">win-vind</div>
-    <div class="center"> <img src="imgs/win-vind-icon.png" width="256" unselectable="no"/></div>
-    <div id="description" class="center">Simpl Vim Key Binder for Windows</div>
-
+    <div id="top-title" class="center">Cheat Sheet</div>
+    <br>
+    <br>
     <div class="side_wrapper">
         <aside id="sidebar">
             <div class="sidebar_inner">
-                <div class="sidebar-item"><a href="..">Home</a></div>
-                <div class="sidebar-item"><a href=".">How to Use</a></div>
-                <div class="sidebar-item"><a href="../how_to_contribute/">How to Contribute</a></div>
-                <div class="sidebar-item"><a href="../cheat_sheet/">Cheat Sheet</a></div>
-                <div class="sidebar-item"><a href="../q_and_a/">Q&amp;A</a></div>
+                <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/">Home</a></div>
+                <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/downloads/">Downloads</div>
+                <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/how_to_use/">How to Use</a></div>
+                <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/how_to_contribute/">How to Contribute</a></div>
+                <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/cheat_sheet/">Cheat Sheet</a></div>
+                <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/q_and_a/">Q&amp;A</a></div>
             </div>
         </aside>
         <main class="main">
+            <div id="jump_to_any">
+                <p>This makes key coordinates on keyboard project coordinates of the desktop.</p>
+
+                <br>
+                <img src="https://github.com/pit-ray/pit-ray.github.io/blob/master/win-vind/imgs/Jump2Any-image.png?raw=true" width="512">
+                <p>For example, it maps <span class="key">Space</span> key to the lower center. Thus, if you type <span class="key">f->Space</span>, jump the mouse cursor to lower center.</p>
+
+                <p>However, the keyboard map is defferent according to languages, so you are able to choose the keyboard type at <b>Preferences/Settings/Common/Keyboard Type</b>.</p>
+                <img src="https://github.com/pit-ray/pit-ray.github.io/blob/master/win-vind/imgs/kb_type.jpg?raw=true" width="512">
+                <br>
+
+                <p>Additionaly, positions of key are very hardware-dependent, so if you don't like default keyboard mapping, you can make optimized <b>custom.kmp</b> as follow ways.</p>
+                <ol>
+                    <li>Choice <b>Custom</b> in <b>Preferences/Settings/Common/Keyboard Type</b>.</li>
+                    <li>Please open the <b>custom.kmp</b>. If you use the installer version, the file exists <b>~/.win-vind/custom.kmp</b>. If you use zip, it does <b>win-vind/config/custom.kmp</b></li>
+                    <li>Rewrite the kmp file.</li>
+                    <div class="sect3">Syntax</div>
+                    <div class="key">
+                     [Xposition]&nbsp;&nbsp;&nbsp;&nbsp;[Yposition]&nbsp;&nbsp;&nbsp;&nbsp;[KeyCode]
+                    </div>
+                    <ul>
+                        <li>the delimiter is some space. By the way, one space is same as multiple spaces.</li>
+                        <li>You must write a syntax per line.</li>
+                        <li><b>[Xposition]</b> and <b>[Yposition]</b> are positive values. Also, Left Upper at the real keyboard is (0, 0) and the max value of X means right-end, Y does bottom.</li>
+                        <li><b>[KeyCode]</b> is ASCII Code or KMP Key Code.</li>
+                        <li>It is <b>not</b> supported <span class="key">Fn</span> Key. In addition, Toggle Key for example, <span class="key">CapsLock</span> or <span class="key">NumLock</span>, is sometimes <b>ignored</b> because kept the push-release-state of the key by hardware according to a product.</li>
+                        <li>Example</li>
+                        <img src="../imgs/kmp_ex.jpg" width="512">
+                        <br>
+                    </ul>
+                </ol>
+                </p>
+            </div>
+
             <br>
-            <br>
-            <span class="sect1">Description</span><hr>
-            <p>You can operate Windows by key-bindings like Vim.</p>
-            <br>
-            <br>
-            <span class="sect1">Downloads</span><hr>
-            <ul>
-                <li><a href="https://github.com/pit-ray/win-vind/releases/download/v2.1.0/setup_win-vind_2.1.0.exe">setup_win-vind_2.1.0.exe</a></li>
-                <li><a href="https://github.com/pit-ray/win-vind/releases/download/v2.1.0/win-vind_2.1.0.zip">win-vind_2.1.0.zip</a></li>
-            </ul>
-            <br>
+            <div id="jump_to_active_window">
+                <p>It makes cursor jump center of most foreground window.</p>
+            </div>
             <br>
 
-            <span class="sect1">GitHub</span><hr>
-            <div style="margin-left: 30px;"><a href="https://github.com/pit-ray/win-vind"><img src="https://gh-card.dev/repos/pit-ray/win-vind.svg"></a></div>
+            <div id="start_shell">
+                <p>It starts command prompt and is equal to typing <span class="key">cmd</span> at Command Prompt. You can change started application by rewriting in <b>Preferences/Shortcut Apps/Console</b>.</p>
+                <img src="https://github.com/pit-ray/pit-ray.github.io/raw/master/win-vind/imgs/config_shortapps.jpg?raw=true" width=512>
+            </div>
             <br>
             <br>
+            <div id="start_any_app">
+                <p>It starts a registered application and you can register command to <b>Preferences/Shortcut Apps</b>.</p>
+                <p>If you register <b>notepad.exe</b> as <b>notepad</b>, could launch it by typing <span class="key">:!notepad</span> like below.</p>
+                <img src="https://github.com/pit-ray/pit-ray.github.io/blob/master/win-vind/imgs/cmd-demo.gif?raw=true" width="400">  
+            </div>
 
-            <span class="sect1">License</span><hr>
-            <ul>
-                <li>This software is provided by <b>MIT License</b>.</li>
+            <br>
+            <br>
+            <div id="make_dir">
+                <p>It has two calling ways.
+                <ol>
+                    <li>Absolutely</li>
+                    If you want to make <b>TestDirectory</b> in <b>C:/ParentDirectory</b>, write like a bellow.
+                    <div class="key">:mkdir C:/ParentDirectory/TestDirectory</div>
+                    <br>
+                    <br>
 
-                <li>Refer to Permissiona and Limitations</li>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Commercial use</th>
-                        <td class="yes">✓</td>
-                    </tr>
-                    <tr>
-                        <th>Modification</th>
-                        <td class="yes">✓</td>
-                    </tr>
-                    <tr>
-                        <th>Distribution</th>
-                        <td class="yes">✓</td>
-                    </tr>
-                    <tr>
-                        <th>Private use</th>
-                        <td class="yes">✓</td>
-                    </tr>
-                    <tr>
-                        <th>Liability</th>
-                        <td class="no">✗</td>
-                    </tr>
-                    <tr>
-                        <th>Warranty</th>
-                        <td class="no">✗</td>
-                    </tr>
-                </tbody>
-            </table>
-            </ul>
+                    <li>Relatively</li>
+                    On the premise that the current directory are opened by <b>explorer.exe</b>, if you want to make <b>TestDirectory</b> in current directory, type as follow.
+                    <div class="key">:mkdir TestDirectory</div>
+                    By the way, It is same as <b>New folder</b> on explorer.exe.
+                </ol>
+            </div>
             <br>
+            <div id="enable_targeting_of_dedicate_to_window">
+                It regards a foreground window as the target for <b>Dedicate to Window</b>.
+            </div>
             <br>
-            <span class="sect1">Contact</span><hr>
-            <ul>
-                <li> pit-ray(Author)
-                    <p><b>Twitter</b>: <a href="https://twitter.com/pitxray">@pitxray</a></p>
-                    <p><b>E-mail</b>: pit-ray(at)outlook.com</p>
-                    <p><b>Blog</b>: <a href="https://www.pit-ray.com">pit-ray.com</a></p>
-                </li>
-            </ul>
+            <div id="disable_targeting_of_dedicate_to_window">
+                It cancels targeting for <b>Dedicate to Window</b>.
+            </div>
         </main>
     </div>
 
     <div class="mobile">
         <br>
         <hr>
-        <div class="sidebar-item"><a href=".">Home</a></div>
-        <div class="sidebar-item"><a href="how_to_use">How to Use</a></div>
-        <div class="sidebar-item"><a href="how_to_contribute">How to Contribute</a></div>
-        <div class="sidebar-item"><a href="cheat_sheet">Cheat Sheet</a></div>
-        <div class="sidebar-item"><a href="q_and_a">Q&amp;A</a></div>
+        <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/">Home</a></div>
+        <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/downloads/">Downloads</div>
+        <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/how_to_use/">How to Use</a></div>
+        <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/how_to_contribute/">How to Contribute</a></div>
+        <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/cheat_sheet/">Cheat Sheet</a></div>
+        <div class="sidebar-item"><a href="https://pit-ray.github.io/win-vind/q_and_a/">Q&amp;A</a></div>
     </div>
 </body>
 </html>
