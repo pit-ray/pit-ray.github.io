@@ -36,7 +36,7 @@ li {
 .important {
     color: red ;
 }
-.key {
+.code {
     color: #3366ff ;
     background-color: #f0f0f0 ;
     font-weight: 300px ;
@@ -104,7 +104,7 @@ table {
     table.long {
         width: 70% ;
     }
-    .key {
+    .code {
         padding: 2px ;
     }
 }

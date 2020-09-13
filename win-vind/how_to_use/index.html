@@ -41,8 +41,8 @@
                 <li>Please download latest version win-vind from <a href="https://pit-ray.github.io/win-vind/downloads">Downloads</a>. </li>
                 <li>Execute the installer or unzip.</li>
                 <li>Start win-vind.</li>
-                <li>In default, the mode is <b>GUI Nomral</b>. You can setup <span class="key">:set</span> or <span class="key">:config</span> or right-click on the system tray.</li>
-                <li>In the end, you can terminate win-vind by <span class="key">:exit</span> or right-click on the system tray.</li>
+                <li>In default, the mode is <b>GUI Nomral</b>. You can setup <span class="code">:set</span> or <span class="code">:config</span> or right-click on the system tray.</li>
+                <li>In the end, you can terminate win-vind by <span class="code">:exit</span> or right-click on the system tray.</li>
             </ol>
 
             <br>
@@ -64,7 +64,7 @@
             <br>
             <span class="sect1" id="note">Note</span><hr>
             <ul>
-                <li><span class="key">F8 + F9</span> is safe forced termination.</li>
+                <li><span class="code">F8 + F9</span> is safe forced termination.</li>
                 <li>win-vind <b>cannot</b> operate some windows given high-rank authorization than itself. For example, if you start Task Manager having the highest authorization and select its window, you cannot move, click or scroll the mouse cursor by win-vind. If you want to operate all windows, I recommend giving win-vind the administrator authorization. (Please use <b>Task Scheduler</b>.)</li>
             </ul>
             <br>
@@ -88,50 +88,50 @@
 
             <span class="sect2">Syntax</span>
             <ul>
-                <li><span class="key">[key1](+)[key2]</span> means typing key1 and key2 with same timing.</li>
-                <li><span class="key">[key1]-&gt;[key2]</span> means typing key2 after key1. </li>
-                <li>It distinguished between upper and lowercase letters. For example, <span class="key">a</span> means <span class="key">a</span>, <span class="key">A</span> does <span class="key">Shift+a</span>.</li>
+                <li><span class="code">[key1](+)[key2]</span> means typing key1 and key2 with same timing.</li>
+                <li><span class="code">[key1]-&gt;[key2]</span> means typing key2 after key1. </li>
+                <li>It distinguished between upper and lowercase letters. For example, <span class="code">a</span> means <span class="code">a</span>, <span class="code">A</span> does <span class="code">Shift+a</span>.</li>
                 <li>If you want to use system keys like Shift or Ctrl, please write KMP key code.</li>
                 <br>
                 <details><summary><span class="sect3">KMP Key Code List</span> <span class="important"> (Click Here)</span></summary>  
                     <table class="long">
                         <tbody>
                             <tr><th>KMP Key Code</th><th>Means</th></tr>
-                            <tr><th><span class="key">IME</span></th><td>unique key at multiple language keyboards in order to switch language.</td></tr>
-                            <tr><th><span class="key">Tab</span></th><td>-</td></tr>
-                            <tr><th><span class="key">Enter</span></th><td>Return Key</td></tr>
-                            <tr><th><span class="key">CapsLock</span></th><td>-</td></tr>
-                            <tr><th><span class="key">Left</span></th><td>←</td></tr>
-                            <tr><th><span class="key">Right</span></th><td>→</td></tr>
-                            <tr><th><span class="key">Up</span></th><td>↑</td></tr>
-                            <tr><th><span class="key">Down</span></th><td>↓</td></tr>
-                            <tr><th><span class="key">BkSpace</span></th><td>Back Space</td></tr>
-                            <tr><th><span class="key">LShift</span></th><td>Left Shift</td></tr>
-                            <tr><th><span class="key">RShift</span></th><td>Right Shift</td></tr>
-                            <tr><th><span class="key">Shift</span></th><td>Left Shift or Right Shift</td></tr>
-                            <tr><th><span class="key">LCtrl</span></th><td>Left Control</td></tr>
-                            <tr><th><span class="key">RCtrl</span></th><td>Right Control</td></tr>
-                            <tr><th><span class="key">Ctrl</span></th><td>Left Control or Right Control</td></tr>
-                            <tr><th><span class="key">LWin</span></th><td>Left Windows Key</td></tr>
-                            <tr><th><span class="key">RWin</span></th><td>Right Windows Key</td></tr>
-                            <tr><th><span class="key">Win</span></th><td>Left Windows Key or Right Windows Key</td></tr>
-                            <tr><th><span class="key">LAlt</span></th><td>Left Alt</td></tr>
-                            <tr><th><span class="key">RAlt</span></th><td>Right Alt</td></tr>
-                            <tr><th><span class="key">Alt</span></th><td>Left Alt or Right Alt</td></tr>
-                            <tr><th><span class="key">NoConvert</span></th><td>unique key at multiple language keyboard in order to cancel convert language.</td></tr>
-                            <tr><th><span class="key">Convert</span></th><td>unique key at multiple language keyboard in order to convert language.</td></tr>
-                            <tr><th><span class="key">Kana</span></th><td>unique key at Japanese keyboard in order to switch between Hiragana and Katakana.</td></tr>
-                            <tr><th><span class="key">Esc</span></th><td>Escape Key</td></tr>
-                            <tr><th><span class="key">F1</span></th><td>Function 1 (supported from 1 to 24)</td></tr>
-                            <tr><th><span class="key">SnapShot</span></th><td>Print Screen, Prt Scr, Sys Rq</td></tr>
-                            <tr><th><span class="key">Scroll</span></th><td>-</td></tr>
-                            <tr><th><span class="key">Pause</span></th><td>Pause, Break</td></tr>
-                            <tr><th><span class="key">Insert</span></th><td>-</td></tr>
-                            <tr><th><span class="key">Home</span></th><td>-</td></tr>
-                            <tr><th><span class="key">End</span></th><td>-</td></tr>
-                            <tr><th><span class="key">PageUp</span></th><td>-</td></tr>
-                            <tr><th><span class="key">PageDown</span></th><td>-</td></tr>
-                            <tr><th><span class="key">Delete</span></th><td>-</td></tr>
+                            <tr><th><span class="code">IME</span></th><td>unique key at multiple language keyboards in order to switch language.</td></tr>
+                            <tr><th><span class="code">Tab</span></th><td>-</td></tr>
+                            <tr><th><span class="code">Enter</span></th><td>Return Key</td></tr>
+                            <tr><th><span class="code">CapsLock</span></th><td>-</td></tr>
+                            <tr><th><span class="code">Left</span></th><td>←</td></tr>
+                            <tr><th><span class="code">Right</span></th><td>→</td></tr>
+                            <tr><th><span class="code">Up</span></th><td>↑</td></tr>
+                            <tr><th><span class="code">Down</span></th><td>↓</td></tr>
+                            <tr><th><span class="code">BkSpace</span></th><td>Back Space</td></tr>
+                            <tr><th><span class="code">LShift</span></th><td>Left Shift</td></tr>
+                            <tr><th><span class="code">RShift</span></th><td>Right Shift</td></tr>
+                            <tr><th><span class="code">Shift</span></th><td>Left Shift or Right Shift</td></tr>
+                            <tr><th><span class="code">LCtrl</span></th><td>Left Control</td></tr>
+                            <tr><th><span class="code">RCtrl</span></th><td>Right Control</td></tr>
+                            <tr><th><span class="code">Ctrl</span></th><td>Left Control or Right Control</td></tr>
+                            <tr><th><span class="code">LWin</span></th><td>Left Windows Key</td></tr>
+                            <tr><th><span class="code">RWin</span></th><td>Right Windows Key</td></tr>
+                            <tr><th><span class="code">Win</span></th><td>Left Windows Key or Right Windows Key</td></tr>
+                            <tr><th><span class="code">LAlt</span></th><td>Left Alt</td></tr>
+                            <tr><th><span class="code">RAlt</span></th><td>Right Alt</td></tr>
+                            <tr><th><span class="code">Alt</span></th><td>Left Alt or Right Alt</td></tr>
+                            <tr><th><span class="code">NoConvert</span></th><td>unique key at multiple language keyboard in order to cancel convert language.</td></tr>
+                            <tr><th><span class="code">Convert</span></th><td>unique key at multiple language keyboard in order to convert language.</td></tr>
+                            <tr><th><span class="code">Kana</span></th><td>unique key at Japanese keyboard in order to switch between Hiragana and Katakana.</td></tr>
+                            <tr><th><span class="code">Esc</span></th><td>Escape Key</td></tr>
+                            <tr><th><span class="code">F1</span></th><td>Function 1 (supported from 1 to 24)</td></tr>
+                            <tr><th><span class="code">SnapShot</span></th><td>Print Screen, Prt Scr, Sys Rq</td></tr>
+                            <tr><th><span class="code">Scroll</span></th><td>-</td></tr>
+                            <tr><th><span class="code">Pause</span></th><td>Pause, Break</td></tr>
+                            <tr><th><span class="code">Insert</span></th><td>-</td></tr>
+                            <tr><th><span class="code">Home</span></th><td>-</td></tr>
+                            <tr><th><span class="code">End</span></th><td>-</td></tr>
+                            <tr><th><span class="code">PageUp</span></th><td>-</td></tr>
+                            <tr><th><span class="code">PageDown</span></th><td>-</td></tr>
+                            <tr><th><span class="code">Delete</span></th><td>-</td></tr>
                         </tbody>
                     </table>
             </ul>
