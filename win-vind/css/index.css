@@ -101,8 +101,13 @@ li {
 }
 .key {
     color: #3366ff ;
-    background-color: #f7f7f7 ;
+    background-color: #f0f0f0 ;
     font-weight: 300px ;
     padding: 6px ;
 }
-
+table.long {
+    width: 70% ;
+}
+.long th {
+    width: 30px ;
+}

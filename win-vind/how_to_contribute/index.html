@@ -5,17 +5,18 @@
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="shortcut icon" type="image/png" href="../imgs/win-vind-icon.png">
-    <script type="text/javascript" src="js/bundle.js"></script>
+    <script type="text/javascript" src="../js/bundle.js"></script>
 
-    <title>win-vind</title>
+    <title>How to Contribute - win-vind</title>
 </head>
 <body>
-    <div id="top-title" class="center">win-vind</div>
-    <div class="center"> <img src="imgs/win-vind-icon.png" width="256" unselectable="no"/></div>
-    <div id="description" class="center">Simpl Vim Key Binder for Windows</div>
-
+    <div id="top-title" class="center">How to Contribute</div>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="side_wrapper">
         <aside id="sidebar">
             <div class="sidebar_inner">
@@ -27,69 +28,83 @@
             </div>
         </aside>
         <main class="main">
+            <span class="sect1">Contibute Procedure</span><hr>
+            <ol>
+                <li>Clone the repository from <a href="https://github.com/pit-ray/win-vind">pit-ray/win-vind</a>. For example, you do a follow command.</li>
+                <p><span class="key">git clone https://github.com/pit-ray/win-vind.git</span></p>
+
+                <li>Make a unique branch for pull requests.</li>
+                <p><span class="key">git checkout -b UNIQUE_BRANCH_NAME</span></p>
+                <li>You can do something for this project.</li>
+                <li>Build project for release in root directory.</li>
+                <p><span class="key">./push_preproc.bat</span></p>
+                <li>Please add, commit and push.</li>
+                <p><span class="key">git add .</span></p>
+                <p><span class="key">git commit -m "Please write a summary of your changes."</span></p>
+                <p><span class="key">git push origin UNIQUE_BRANCH_NAME</span></p>
+                <li>Please send pull requests at <a href="https://github.com/pit-ray/win-vind/pulls">Pull requests pit-ray/win-vind</a></li>
+            </ol>
+
             <br>
-            <br>
-            <span class="sect1">Description</span><hr>
-            <p>You can operate Windows by key-bindings like Vim.</p>
-            <br>
-            <br>
-            <span class="sect1">Downloads</span><hr>
+            <span class="sect1">Note</span><hr>
             <ul>
-                <li><a href="https://github.com/pit-ray/win-vind/releases/download/v2.1.0/setup_win-vind_2.1.0.exe">setup_win-vind_2.1.0.exe</a></li>
-                <li><a href="https://github.com/pit-ray/win-vind/releases/download/v2.1.0/win-vind_2.1.0.zip">win-vind_2.1.0.zip</a></li>
+                <li><span class="important">Your written codes are provided as <b>MIT License</b></span></li>
+                <li><span class="important">If you used third party libraries, you must add some essential texts in <a href="https://github.com/pit-ray/win-vind/blob/master/THIRD_PARTY_LICENSES.txt"><b>THIRD_PARTY_LICENSES.TXT</b></a> before pull requests.</span></li>
+                <li>You're most welcomed! All you need is some passions for win-vind.</li>
             </ul>
-            <br>
-            <br>
 
-            <span class="sect1">GitHub</span><hr>
-            <div style="margin-left: 30px;"><a href="https://github.com/pit-ray/win-vind"><img src="https://gh-card.dev/repos/pit-ray/win-vind.svg"></a></div>
             <br>
-            <br>
-
-            <span class="sect1">License</span><hr>
-            <ul>
-                <li>This software is provided by <b>MIT License</b>.</li>
-
-                <li>Refer to Permissiona and Limitations</li>
-            <table>
+            <span class="sect1">Development Environment</span><hr>
+            <p>You must install follow softwares or libraries.</p>
+            <table class="long">
                 <tbody>
                     <tr>
-                        <th>Commercial use</th>
-                        <td class="yes">✓</td>
+                        <th>Name</th>
+                        <th>Minimum Version</th>
+                        <th>Download Link</th>
                     </tr>
                     <tr>
-                        <th>Modification</th>
-                        <td class="yes">✓</td>
+                        <th>MinGW-w64</th>
+                        <td>4.3.5</td>
+                        <td><a href="https://sourceforge.net/projects/mingw-w64/files/mingw-w64/">MinGW-w64 SourceForge.net</a></td>
                     </tr>
                     <tr>
-                        <th>Distribution</th>
-                        <td class="yes">✓</td>
+                        <th>CMake</th>
+                        <td>3.14.4</td>
+                        <td><a href="https://cmake.org/download/">Download - CMake</a></td>
                     </tr>
                     <tr>
-                        <th>Private use</th>
-                        <td class="yes">✓</td>
+                        <th>wxWidgets</th>
+                        <td>3.0.5</td>
+                        <td><a href="https://www.wxwidgets.org/downloads/">Downloads - wxWidgets</a></td>
                     </tr>
                     <tr>
-                        <th>Liability</th>
-                        <td class="no">✗</td>
-                    </tr>
-                    <tr>
-                        <th>Warranty</th>
-                        <td class="no">✗</td>
+                        <th>NSIS</th>
+                        <td>3.06.1</td>
+                        <td><a href="https://nsis.sourceforge.io/Download">Download - NSIS</a></td>
                     </tr>
                 </tbody>
             </table>
-            </ul>
+            <p>This project use <b>&lt;mutex&gt;</b>, so some MinGW without it will fail a build. In this case, you will need to install other MinGW with <mutex>. (select posix at item called Thread in MinGW-Installer.)</p>
+
             <br>
-            <br>
-            <span class="sect1">Contact</span><hr>
+            <span class="sect1">Build Instruction</span><hr>
             <ul>
-                <li> pit-ray(Author)
-                    <p><b>Twitter</b>: <a href="https://twitter.com/pitxray">@pitxray</a></p>
-                    <p><b>E-mail</b>: pit-ray(at)outlook.com</p>
-                    <p><b>Blog</b>: <a href="https://www.pit-ray.com">pit-ray.com</a></p>
-                </li>
+                <li>Automatically <span class="important">(Recommended)</span></li>
+                <p><span class="key">./build.bat [-debug/-release]</span></p>
+                <li>Manually</li>
+                <div class="key">
+                    mkdir debug<br>
+                    cd debug<br>
+                    cmake -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -DCMAKE_SH="CMAKE_SH-NOTFOUND" ..<br>
+                    mingw32-make -f Makefile<br>
+                    cd ..<br>
+                </div>
             </ul>
+
+            <br>
+            <span class="sect1">Class Information</span><hr>
+            <p>Getting Ready Now</p>
         </main>
     </div>
 
