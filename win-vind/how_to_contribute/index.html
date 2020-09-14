@@ -6,8 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/prettify.css">
     <link rel="shortcut icon" type="image/png" href="../imgs/win-vind-icon.png">
     <script type="text/javascript" src="../js/bundle.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
     <title>How to Contribute - win-vind</title>
 </head>
@@ -38,7 +40,7 @@
                 <div class="code"><p>$git checkout -b UNIQUE_BRANCH_NAME</p></div>
                 <li>You can do something for this project.</li>
                 <li>Build project for release in root directory.</li>
-                <div class="code"><p>$./push_preproc.bat</p></div>
+                <div class="code"><p>$./push_preproc.bat 0.0.0</p></div>
                 <li>Please add, commit and push.</li>
                 <div class="code"><p>$git add .</p></div>
                 <div class="code"><p>$git commit -m "Please write a summary of your changes."</p></div>
@@ -105,7 +107,76 @@
 
             <br>
             <span class="sect1">Class Information</span><hr>
-            <p>Getting Ready Now</p>
+            <p>There are six base classes in win-vind as follow.</p>
+            <table class="long">
+                <tbody>
+                    <tr>
+                        <th>Pure Base Class</th>
+                        <th>Base Class With Creator</th>
+                        <th>Function Examples</th>
+                    </tr>
+                    <tr>
+                        <td>KeyBinding</td>
+                        <td>KeyBindingWithCreator</td>
+                        <td><span class="code">d-&gt;d</span>, <span class="code">h</span>, <span class="code">j</span>, <span class="code">k</span>, <span class="code">l</span></td>
+                    </tr>
+                    <tr>
+                        <td>Command</td>
+                        <td>CommandWithCreator</td>
+                        <td><span class="code">:exit</span>, <span class="code">:close</span>, <span class="code">:mkdir</span></td>
+                    </tr>
+                    <tr>
+                        <td>DynamicOption</td>
+                        <td>DynamicOptionWithCreator</td>
+                        <td>Autotrack Popup</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><b>With Creator</b> means having some factory functions. If you make some new functions, you must register to <b>include/system/key_binder_list.hpp</b>, so I recommend to use <b>With Creator</b> base classes in order to register easily.</p>
+
+            <div class="sect2">New KeyBinding Example</div>
+            <ol>
+                <li>Make a new derived class (e.g. <b>MyBinding</b> and add files into <b>system/***_bindings/</b>.</li>
+                <p><b>my_binding.hpp</b></p>
+<pre class="prettyprint"><code class="lang-cpp">#ifndef _TEST_BINDING_HPP
+#define _TEST_BINDING_HPP
+#include "key_binding_with_creator.hpp"
+
+struct MyBinding : public KeyBindingWithCreator&lt;MyBinding&gt;
+{
+    static bool sprocess(const bool first_call) ;
+    static const std::string sname() noexcept ;
+} ;
+#endif
+</code></pre>
+
+                <p><b>my_binding.cpp</b></p>
+<pre class="prettyprint"><code class="lang-cpp">#include "my_binding.hpp"
+
+const std::string MyBinding::sname() noexcept
+{
+    return "my_binding" ;
+}
+bool MyBinding::sprocess(const bool first_call)
+{
+    //Do something
+    return true ;
+}
+</code></pre>
+            <li>You must register <b>MyBinding</b> to <b>include/system/key_binder_list.hpp</b></li>
+            <li>Please add the unique identifier to <b>default_config/bindings.json</b>.</li>
+<pre class="prettyprint"><code class="lang-json">{
+    "name": "my_binding",
+    "key": ["q-&gt;c"],
+    "cmd": [],
+    "en": "My Binding"
+}
+</code></pre>
+            </ol>
+            <br>
+            <br>
+            <br>
         </main>
     </div>
 

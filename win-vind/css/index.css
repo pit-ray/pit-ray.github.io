@@ -15,11 +15,10 @@ body {
     font-size: 25pt ;
 }
 table {
-    width: 40% ;
     border: 1px solid #333 ;
     border-collapse: collapse ;
     margin: 10px ;
-
+    width: 100% ;
 }
 th {
     border: 1px solid #333 ;
@@ -78,9 +77,6 @@ img {
 img.logo {
     width: 256px ;
 }
-table {
-    width: 100% ;
-}
 .main {
     width: 100% ;
     position: relative ;
@@ -100,6 +96,9 @@ table {
     }
     .main {
         width: 80% ;
+    }
+    table {
+        width: 40% ;
     }
     table.long {
         width: 70% ;
