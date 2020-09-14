@@ -19,6 +19,9 @@ table {
     border-collapse: collapse ;
     margin: 10px ;
     width: 100% ;
+    table-layout: fixed ;
+    word-break: break-all ;
+    word-wrap: break-word ;
 }
 table.long {
     width: 100% ;
@@ -27,12 +30,10 @@ th {
     border: 1px solid #333 ;
     background-color: #f6f6f6 ;
     font-weight: 500 ;
-    word-wrap: break-word ;
 }
 th, td {
     border: 1px solid #333 ;
     padding: 10px ;
-    word-wrap: break-word ;
 }
 li {
     padding: 5px ;
