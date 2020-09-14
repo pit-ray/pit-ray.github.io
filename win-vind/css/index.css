@@ -20,14 +20,19 @@ table {
     margin: 10px ;
     width: 100% ;
 }
+table.long {
+    width: 100% ;
+}
 th {
     border: 1px solid #333 ;
     background-color: #f6f6f6 ;
     font-weight: 500 ;
+    word-wrap: break-word ;
 }
 th, td {
     border: 1px solid #333 ;
     padding: 10px ;
+    word-wrap: break-word ;
 }
 li {
     padding: 5px ;
@@ -41,9 +46,6 @@ li {
     font-weight: 300px ;
     padding: 0px ;
     position: relative ;
-}
-table.long {
-    width: 100% ;
 }
 .long th {
     width: 30px ;
