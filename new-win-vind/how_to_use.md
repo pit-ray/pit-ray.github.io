@@ -16,10 +16,10 @@ descripption: "Usage of win-vind"
 <br>
 <br>
 <span class="sect1" id="overview">Overview</span><hr>
-<img src="../imgs/mode_overview_2.jpg">
+<!--<img src="../imgs/mode_overview_2.jpg">-->
 <p>win-vind has plenty of hotkeys and commands, but they are based on the original Vim. Some little differences are that its mode has two layers and its unique functions for GUI. Concretely, they are <b>GUI Mode</b> and <b>Editor Mode</b>. </p>
 
-<img src="../imgs/GUIandEditor.jpg">
+<!--<img src="../imgs/GUIandEditor.jpg">-->
 <ul>
     <li>GUI Mode</li>
     <p>The target is the mouse cursor. For instance, if you input h, moves it to left. However, it does not have a concept called rows and columns, so I implemented a wealth of alternative functions.</p>

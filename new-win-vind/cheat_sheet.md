@@ -34,7 +34,7 @@ has_children: true
             <div class='kmp_list'></div>
             <li>It is <b>not</b> supported <span class="code">Fn</span> Key. In addition, Toggle Key for example, <span class="code">CapsLock</span> or <span class="code">NumLock</span>, is sometimes <b>ignored</b> because kept the push-release-state of the key by hardware according to a product.</li>
             <li>Example</li>
-            <img src="../imgs/kmp_ex.jpg" width="512">
+            <!--<img src="../imgs/kmp_ex.jpg" width="512">-->
             <br>
         </ul>
     </ol>
