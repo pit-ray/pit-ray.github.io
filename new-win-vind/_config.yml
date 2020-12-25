@@ -2,8 +2,8 @@ title: win-vind
 description: Simple Vim Key Binder for Windows
 #url: "https://pit-ray.github.io/win-vind"
 
-theme: "just-the-docs"
-logo: "/assets/images/win-vind-icon_wt.png"
+remote-theme: "pmarsceill/just-the-docs"
+logo: "/imgs/win-vind-icon_wt.png"
 
 search_enabled: true
 search_.rel_url: true
