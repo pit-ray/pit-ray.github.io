@@ -1,0 +1,56 @@
+I"9<h1 id="simple-vim-key-binder-for-windows">Simple Vim Key Binder for Windows</h1>
+<hr />
+
+<h2 id="description">Description</h2>
+<p>You can operate Windows by key-bindings like Vim.</p>
+
+<h2 id="github">GitHub</h2>
+<p><a href="https://github.com/pit-ray/win-vind"><img src="https://gh-card.dev/repos/pit-ray/win-vind.svg" alt="pit-ray/win-vind - GitHub" /></a></p>
+
+<h2 id="license">License</h2>
+<p>This software is provided by <strong>MIT License</strong>.
+Refer to Permissions and Limitations.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Support</th>
+      <th style="text-align: center">Is it allowed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Commercial use</td>
+      <td style="text-align: center"><font color="#00c070">✓</font></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Modification</td>
+      <td style="text-align: center"><font color="#00c070">✓</font></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Distribution</td>
+      <td style="text-align: center"><font color="#00c070">✓</font></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Private use</td>
+      <td style="text-align: center"><font color="#00c070">✓</font></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Liability</td>
+      <td style="text-align: center"><font color="red">✘</font></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Warranty</td>
+      <td style="text-align: center"><font color="red">✘</font></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="contact">Contact</h2>
+<ul>
+  <li>pit-ray(Author)<br />
+<strong>Twitter</strong>: <a href="https://twitter.com/pitxray">@pitxray</a><br />
+<strong>E-mail</strong>: pit-ray(at)outlook.com<br />
+<strong>Blog</strong>: <a href="https://www.pit-ray.com">pit-ray.com</a></li>
+</ul>
+:ET
